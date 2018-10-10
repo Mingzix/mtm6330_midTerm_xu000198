@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+header {
+  height: 2.5em;
+  background-color: black;
+  .title {
+    color: white;
+  }
+}
+main {
+  margin: 0 auto;
+  .subtitle {
+    color: red;
+  }
+}
