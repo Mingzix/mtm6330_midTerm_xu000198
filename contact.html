@@ -5,44 +5,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/min/main.css">
   <title>BLC</title>
 </head>
 
 <body>
   <header>
-    <div class="title">Better Life Canada</div>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="service.html">SERVICE</a>
-      <a href="about.html">ABOUT</a>
-      <a href="contact.html">CONTACT</a>
-
-    </nav>
-    <div>
-      <img src="img/3.jpg" alt="slide">
-
-      <div class="subtitle">Contact Us</div>
+    <div class="navbar">
+      <div class="logo">
+        <img src="img/MTM6260Syllabus.png">
+        <div class="title">Better Life Canada</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="menu-item">HOME</a>
+        <a href="service.html" class="menu-item">SERVICE</a>
+        <a href="about.html" class="menu-item">ABOUT</a>
+        <a href="contact.html" class="menu-item active">CONTACT</a>
+      </nav>
+    </div>
+    <div class="show four">
+      <div class="subtitle">
+        <h2>Contact us</h2>
+      </div>
+      <!--<img src="img/4.jpg" alt="slide">-->
     </div>
   </header>
   <main>
+    <div class="contactpage">
+      <form>
+        <fieldset class="firstname">
+          <label for="name">First Name</label>
+          <input type="text" name="name" id="name" placeholder="Jane Doe">
+        </fieldset>
+        <fieldset class="lastname">
+          <label for="name">Last Name</label>
+          <input type="text" name="name" id="name" placeholder="Jane Doe">
+        </fieldset>
+        <fieldset class="email">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="Jane@mail.com">
+        </fieldset>
 
-    <div class="contactForm"></div>
+        <fieldset class="message">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Tell us what are you interested? career coaching? education? or summer camps?"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <button type="submit" value="Submit">Submit</button>
+        </fieldset>
+      </form>
+      <div class="contactinfo">
+        <p>
+          Telphone: 123-456-789<br>
+          Email: jadeatvpi@gmail.com <br>
+          Address:406-85 Enterprise Blvd.,<br>
+          Markham, On L6G 183 Canada<br>
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.339573294669!2d-79.33061824890139!3d43.84878994767635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d45bea2c1fc9%3A0x2ae5891417218849!2s85+Enterprise+Blvd%2C+Markham%2C+ON+L6G+1B3!5e0!3m2!1sen!2sca!4v1539544269054"
+          width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="contact">
-      <p>123-456-789</p>
+      <p>Tel: 123-456-789</p>
     </div>
     <div class="socialMedia">
-      <div class="facebook"></div>
-      <div class="twitter"></div>
-      <div class="instagram"></div>
+      <div class="icon facebook"><img src="img/socialMedia_circle/facebook (1).svg"></div>
+      <div class="icon twitter"><img src="img/socialMedia_circle/twitter.svg"></div>
+      <div class="icon LinkedIn"><img src="img/socialMedia_circle/linkedin.svg"></div>
     </div>
     <div class="copyRight">
       <p>©2015 by Better Life Canada. All right Reserved. Terms and service. Privacy & Policy</p>
     </div>
   </footer>
-
 </body>
 
 </html>

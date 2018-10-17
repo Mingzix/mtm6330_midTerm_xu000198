@@ -1,0 +1,415 @@
+@import 'base';
+/* Global Sass variables */
+$brand-color: #0071bc;
+$sec-color: #1b1b1b;
+/* Add styles here */
+.navbar {
+  /* Class scoped Sass variable */
+  padding: 0px;
+  $height: 50px;
+  align-items: center;
+  background-color: $sec-color;
+
+  // Use sudo element to overlay the border on top of the menu-item
+  &::before {
+    content: ' ';
+
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+
+  .logo {
+    height: $height;
+    align-items: center;
+    display: flex;
+    padding: 0 25%;
+    img {
+      height: calc(100% - 1rem);
+      width: auto;
+      margin: 0;
+    }
+    .title {
+      padding-left: 8px;
+      color: $brand-color;
+      font-size: 1rem;
+    }
+  }
+
+  .nav {
+    align-items: center;
+    height: 100%;
+    background-color: $sec-color;
+  }
+
+  .menu-item {
+    font-size: 0.8rem;
+    align-items: center;
+    color: $brand-color;
+    display: flex;
+    flex-grow: 1;
+    height: 40px;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #00497a8c;
+    text-transform: uppercase;
+    text-decoration-line: none;
+
+    &:hover {
+      background-color: $brand-color;
+      color: whitesmoke;
+      cursor: pointer;
+    }
+
+    // psudo class applied by the browser when element is clicked
+    &:active,
+    // regular class added/removed by javascript in our app
+    &.active {
+      background-color: lighten(desaturate($brand-color, 30%), 27%);
+      color: whitesmoke;
+    }
+  }
+}
+
+.show {
+  color: white;
+  padding: 0px;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 250px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .subtitle {
+    background-color: hsla(10%, 10%, 10%, 0.5);
+    font-size: 18px;
+    align-items: center;
+    height: 250px;
+    text-align: center;
+    padding: 50px 0;
+    p {
+      margin: 0 auto;
+    }
+    .button {
+      background-color: $brand-color;
+      margin: 10px auto;
+      color: white;
+      box-shadow: #0071bc 0px 0px 10px;
+      width: 200px;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: white;
+      margin: 0 auto;
+      padding: 80px;
+      text-align: center;
+    }
+  }
+}
+.show.one {
+  background-image: url(../../img/4.jpg);
+  background-position: top;
+}
+.show.two {
+  background-image: url(../../img/7.jpg);
+}
+.show.three {
+  background-image: url(../../img/6.jpg);
+}
+.show.four {
+  background-image: url(../../img/2.jpg);
+}
+main {
+  margin: 0px auto;
+  .intro {
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 94%);
+  }
+  .content {
+    padding: 0px 10px;
+    margin: 10px auto;
+    h3 {
+      font-size: 1.5rem;
+    }
+    .info {
+      display: block;
+      justify-content: center;
+      flex-grow: 1;
+      img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+      }
+      p {
+        margin: 0 auto;
+        padding-top: 10px;
+      }
+    }
+  }
+  .team {
+    text-align: center;
+    margin: 0 auto;
+
+    .bioscard {
+      display: block;
+      justify-content: center;
+      flex-grow: 1;
+      .bio {
+        margin: 0 20px;
+
+        img {
+          border-radius: 500px;
+          padding: 10px;
+          width: 200px;
+        }
+        .name {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .contactpage {
+    .contactinfo {
+      padding: 0 20px;
+      width: 100%;
+      iframe {
+        width: 90%;
+        height: 70%;
+      }
+    }
+    form {
+      padding: 0 10px;
+      width: 100%;
+      fieldset {
+        display: block;
+        padding: 0.5rem 0 0 0;
+        border: none;
+      }
+      textarea,
+      input {
+        background-color: hsla(10%, 10%, 10%, 0.1);
+        box-sizing: border-box;
+        padding: 10px;
+        border: none;
+        clear: left;
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+      }
+      textarea {
+        overflow: auto;
+      }
+      button {
+        max-width: 35rem;
+        padding: 0.5rem 2rem;
+        margin: 0 auto;
+        font-size: 1.5rem;
+        background-color: $brand-color;
+        color: white;
+        border-radius: 5px;
+        border: none;
+      }
+      button:hover {
+        background-color: grey;
+      }
+    }
+  }
+}
+footer {
+  background-color: $sec-color;
+  color: white;
+  text-align: center;
+  .contact {
+    padding: 20px;
+  }
+  .socialMedia {
+    width: 150px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .copyRight {
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+}
+
+/*--------
+mobile
+------*/
+@media screen and (min-width: 560px) {
+  .navbar {
+    $height: 60px;
+    display: flex;
+    font-size: 1.5rem;
+    height: $height;
+    align-items: center;
+
+    .logo {
+      height: $height;
+      align-items: center;
+      flex-grow: 1;
+      padding-left: 1rem;
+      display: flex;
+      height: 100%;
+      img {
+        height: calc(100% - 1rem);
+        width: auto;
+      }
+      .title {
+        padding-left: 8px;
+        font-size: 1.5rem;
+      }
+    }
+    .nav {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-grow: 1;
+      height: $height;
+      justify-content: center;
+      letter-spacing: 0.5px;
+      font-size: 1rem;
+      border: none;
+    }
+  }
+  .show {
+    max-width: 1280px;
+    height: 400px;
+    .subtitle {
+      font-size: 20px;
+      padding: 120px 10%;
+      height: 400px;
+      .button {
+        width: 200px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0 auto;
+        padding: 100px;
+        text-align: center;
+      }
+    }
+  }
+  main {
+    margin: 0px auto;
+    .intro {
+      padding: 20px 25%;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .content {
+      padding: 0px 20%;
+      h3 {
+        font-size: 1.5rem;
+      }
+      .info {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        img {
+          width: 50%;
+          height: 100%;
+          padding-top: 10px;
+        }
+        p {
+          margin: 0 auto;
+          padding-left: 20px;
+        }
+      }
+    }
+    .team {
+      text-align: center;
+      margin: 0 auto;
+
+      .bioscard {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        .bio {
+          margin: 0 50px;
+
+          img {
+            padding: 20px;
+            width: 200px;
+          }
+          .name {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    .contactpage {
+      display: flex;
+      padding: 20px;
+      .contactinfo {
+        padding: 0 20px;
+        width: 50%;
+        iframe {
+          width: 90%;
+          height: 70%;
+        }
+      }
+      form {
+        padding: 0 10px;
+        width: 50%;
+        textarea,
+        input {
+          width: 90%;
+        }
+
+        button {
+          max-width: 35rem;
+          padding: 0.5rem 2rem;
+          margin: 0 auto;
+          font-size: 1.5rem;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  footer {
+    .contact {
+      padding: 20px;
+    }
+    .socialMedia {
+      width: 150px;
+      margin: 10px auto;
+
+      .icon img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .copyRight {
+      padding: 5px;
+      font-size: 0.7rem;
+    }
+  }
+}

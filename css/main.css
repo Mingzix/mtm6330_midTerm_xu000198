@@ -1,0 +1,347 @@
+/* Baseline reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #feffff;
+  color: rgba(0, 0, 0, 0.78);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 100%;
+  line-height: 1.64rem;
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(0, 0, 0, 0.89); }
+
+article {
+  padding: 2rem 1rem; }
+
+/* Global Sass variables */
+/* Add styles here */
+.navbar {
+  /* Class scoped Sass variable */
+  padding: 0px;
+  align-items: center;
+  background-color: #1b1b1b; }
+  .navbar::before {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    width: 100%; }
+  .navbar .logo {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    padding: 0 25%; }
+    .navbar .logo img {
+      height: calc(100% - 1rem);
+      width: auto;
+      margin: 0; }
+    .navbar .logo .title {
+      padding-left: 8px;
+      color: #0071bc;
+      font-size: 1rem; }
+  .navbar .nav {
+    align-items: center;
+    height: 100%;
+    background-color: #1b1b1b; }
+  .navbar .menu-item {
+    font-size: 0.8rem;
+    align-items: center;
+    color: #0071bc;
+    display: flex;
+    flex-grow: 1;
+    height: 40px;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #00497a8c;
+    text-transform: uppercase;
+    text-decoration-line: none; }
+    .navbar .menu-item:hover {
+      background-color: #0071bc;
+      color: whitesmoke;
+      cursor: pointer; }
+    .navbar .menu-item:active, .navbar .menu-item.active {
+      background-color: #62b0e3;
+      color: whitesmoke; }
+
+.show {
+  color: white;
+  padding: 0px;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .show .subtitle {
+    background-color: rgba(28, 24, 23, 0.5);
+    font-size: 18px;
+    align-items: center;
+    height: 250px;
+    text-align: center;
+    padding: 50px 0; }
+    .show .subtitle p {
+      margin: 0 auto; }
+    .show .subtitle .button {
+      background-color: #0071bc;
+      margin: 10px auto;
+      color: white;
+      box-shadow: #0071bc 0px 0px 10px;
+      width: 200px;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center; }
+    .show .subtitle h2 {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: white;
+      margin: 0 auto;
+      padding: 80px;
+      text-align: center; }
+
+.show.one {
+  background-image: url(../../img/4.jpg);
+  background-position: top; }
+
+.show.two {
+  background-image: url(../../img/7.jpg); }
+
+.show.three {
+  background-image: url(../../img/6.jpg); }
+
+.show.four {
+  background-image: url(../../img/2.jpg); }
+
+main {
+  margin: 0px auto; }
+  main .intro {
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f0f0f0; }
+  main .content {
+    padding: 0px 10px;
+    margin: 10px auto; }
+    main .content h3 {
+      font-size: 1.5rem; }
+    main .content .info {
+      display: block;
+      justify-content: center;
+      flex-grow: 1; }
+      main .content .info img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto; }
+      main .content .info p {
+        margin: 0 auto;
+        padding-top: 10px; }
+  main .team {
+    text-align: center;
+    margin: 0 auto; }
+    main .team .bioscard {
+      display: block;
+      justify-content: center;
+      flex-grow: 1; }
+      main .team .bioscard .bio {
+        margin: 0 20px; }
+        main .team .bioscard .bio img {
+          border-radius: 500px;
+          padding: 10px;
+          width: 200px; }
+        main .team .bioscard .bio .name {
+          font-size: 1.5rem; }
+  main .contactpage .contactinfo {
+    padding: 0 20px;
+    width: 100%; }
+    main .contactpage .contactinfo iframe {
+      width: 90%;
+      height: 70%; }
+  main .contactpage form {
+    padding: 0 10px;
+    width: 100%; }
+    main .contactpage form fieldset {
+      display: block;
+      padding: 0.5rem 0 0 0;
+      border: none; }
+    main .contactpage form textarea,
+    main .contactpage form input {
+      background-color: rgba(28, 24, 23, 0.1);
+      box-sizing: border-box;
+      padding: 10px;
+      border: none;
+      clear: left;
+      display: block;
+      width: 100%;
+      margin: 1rem 0; }
+    main .contactpage form textarea {
+      overflow: auto; }
+    main .contactpage form button {
+      max-width: 35rem;
+      padding: 0.5rem 2rem;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      background-color: #0071bc;
+      color: white;
+      border-radius: 5px;
+      border: none; }
+    main .contactpage form button:hover {
+      background-color: grey; }
+
+footer {
+  background-color: #1b1b1b;
+  color: white;
+  text-align: center; }
+  footer .contact {
+    padding: 20px; }
+  footer .socialMedia {
+    width: 150px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center; }
+    footer .socialMedia .icon img {
+      width: 40px;
+      height: 40px; }
+  footer .copyRight {
+    padding: 5px;
+    font-size: 0.7rem; }
+
+/*--------
+mobile
+------*/
+@media screen and (min-width: 560px) {
+  .navbar {
+    display: flex;
+    font-size: 1.5rem;
+    height: 60px;
+    align-items: center; }
+    .navbar .logo {
+      height: 60px;
+      align-items: center;
+      flex-grow: 1;
+      padding-left: 1rem;
+      display: flex;
+      height: 100%; }
+      .navbar .logo img {
+        height: calc(100% - 1rem);
+        width: auto; }
+      .navbar .logo .title {
+        padding-left: 8px;
+        font-size: 1.5rem; }
+    .navbar .nav {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px; }
+    .navbar .menu-item {
+      display: flex;
+      flex-grow: 1;
+      height: 60px;
+      justify-content: center;
+      letter-spacing: 0.5px;
+      font-size: 1rem;
+      border: none; }
+  .show {
+    max-width: 1280px;
+    height: 400px; }
+    .show .subtitle {
+      font-size: 20px;
+      padding: 120px 10%;
+      height: 400px; }
+      .show .subtitle .button {
+        width: 200px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center; }
+      .show .subtitle h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0 auto;
+        padding: 100px;
+        text-align: center; }
+  main {
+    margin: 0px auto; }
+    main .intro {
+      padding: 20px 25%;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    main .content {
+      padding: 0px 20%; }
+      main .content h3 {
+        font-size: 1.5rem; }
+      main .content .info {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1; }
+        main .content .info img {
+          width: 50%;
+          height: 100%;
+          padding-top: 10px; }
+        main .content .info p {
+          margin: 0 auto;
+          padding-left: 20px; }
+    main .team {
+      text-align: center;
+      margin: 0 auto; }
+      main .team .bioscard {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1; }
+        main .team .bioscard .bio {
+          margin: 0 50px; }
+          main .team .bioscard .bio img {
+            padding: 20px;
+            width: 200px; }
+          main .team .bioscard .bio .name {
+            font-size: 1.5rem; }
+    main .contactpage {
+      display: flex;
+      padding: 20px; }
+      main .contactpage .contactinfo {
+        padding: 0 20px;
+        width: 50%; }
+        main .contactpage .contactinfo iframe {
+          width: 90%;
+          height: 70%; }
+      main .contactpage form {
+        padding: 0 10px;
+        width: 50%; }
+        main .contactpage form textarea,
+        main .contactpage form input {
+          width: 90%; }
+        main .contactpage form button {
+          max-width: 35rem;
+          padding: 0.5rem 2rem;
+          margin: 0 auto;
+          font-size: 1.5rem;
+          border-radius: 5px; }
+  footer .contact {
+    padding: 20px; }
+  footer .socialMedia {
+    width: 150px;
+    margin: 10px auto; }
+    footer .socialMedia .icon img {
+      width: 40px;
+      height: 40px; }
+  footer .copyRight {
+    padding: 5px;
+    font-size: 0.7rem; } }
