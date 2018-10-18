@@ -2,7 +2,6 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  max-width: 1280px;
   margin: 0 auto; }
 
 *,
@@ -46,7 +45,8 @@ article {
     height: 50px;
     align-items: center;
     display: flex;
-    padding: 0 25%; }
+    padding: 0 25%;
+    text-decoration-line: none; }
     .navbar .logo img {
       height: calc(100% - 1rem);
       width: auto;
@@ -82,7 +82,6 @@ article {
 .show {
   color: white;
   padding: 0px;
-  max-width: 1280px;
   margin: 0 auto;
   height: 250px;
   background-position: center;
@@ -90,22 +89,23 @@ article {
   background-repeat: no-repeat; }
   .show .subtitle {
     background-color: rgba(28, 24, 23, 0.5);
-    font-size: 18px;
+    font-size: 1rem;
     align-items: center;
     height: 250px;
     text-align: center;
     padding: 50px 0; }
     .show .subtitle p {
-      margin: 0 auto; }
+      margin: 25px auto; }
     .show .subtitle .button {
       background-color: #0071bc;
-      margin: 10px auto;
+      margin: 30px auto;
       color: white;
       box-shadow: #0071bc 0px 0px 10px;
       width: 200px;
       border-radius: 10px;
       padding: 10px;
-      text-align: center; }
+      text-align: center;
+      text-decoration-line: none; }
     .show .subtitle h2 {
       font-size: 1.4rem;
       font-weight: 300;
@@ -114,17 +114,17 @@ article {
       padding: 80px;
       text-align: center; }
 
-.show.one {
+.show.home {
   background-image: url(../../img/4.jpg);
   background-position: top; }
 
-.show.two {
+.show.service {
   background-image: url(../../img/7.jpg); }
 
-.show.three {
+.show.about {
   background-image: url(../../img/6.jpg); }
 
-.show.four {
+.show.contact {
   background-image: url(../../img/2.jpg); }
 
 main {
@@ -132,8 +132,7 @@ main {
   main .intro {
     padding: 10px 20px;
     width: 100%;
-    margin: 0 auto;
-    background-color: #f0f0f0; }
+    margin: 0 auto; }
   main .content {
     padding: 0px 10px;
     margin: 10px auto; }
@@ -152,7 +151,9 @@ main {
         padding-top: 10px; }
   main .team {
     text-align: center;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 30px 10px;
+    background-color: #dbefff; }
     main .team .bioscard {
       display: block;
       justify-content: center;
@@ -239,11 +240,7 @@ mobile
       padding-left: 1rem;
       display: flex;
       height: 100%; }
-      .navbar .logo img {
-        height: calc(100% - 1rem);
-        width: auto; }
       .navbar .logo .title {
-        padding-left: 8px;
         font-size: 1.5rem; }
     .navbar .nav {
       display: flex;
@@ -253,95 +250,54 @@ mobile
       height: 60px; }
     .navbar .menu-item {
       display: flex;
-      flex-grow: 1;
       height: 60px;
-      justify-content: center;
-      letter-spacing: 0.5px;
       font-size: 1rem;
       border: none; }
   .show {
-    max-width: 1280px;
     height: 400px; }
     .show .subtitle {
-      font-size: 20px;
+      font-size: 1.3rem;
       padding: 120px 10%;
       height: 400px; }
-      .show .subtitle .button {
-        width: 200px;
-        border-radius: 10px;
-        padding: 10px;
-        text-align: center; }
+      .show .subtitle p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        padding: 1rem; }
       .show .subtitle h2 {
         font-size: 2rem;
-        font-weight: 300;
-        margin: 0 auto;
-        padding: 100px;
-        text-align: center; }
-  main {
-    margin: 0px auto; }
-    main .intro {
-      padding: 20px 25%;
-      width: 100%;
-      margin: 0 auto;
-      text-align: center; }
-    main .content {
-      padding: 0px 20%; }
-      main .content h3 {
-        font-size: 1.5rem; }
-      main .content .info {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1; }
-        main .content .info img {
-          width: 50%;
-          height: 100%;
-          padding-top: 10px; }
-        main .content .info p {
-          margin: 0 auto;
-          padding-left: 20px; }
-    main .team {
-      text-align: center;
-      margin: 0 auto; }
-      main .team .bioscard {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1; }
-        main .team .bioscard .bio {
-          margin: 0 50px; }
-          main .team .bioscard .bio img {
-            padding: 20px;
-            width: 200px; }
-          main .team .bioscard .bio .name {
-            font-size: 1.5rem; }
-    main .contactpage {
-      display: flex;
-      padding: 20px; }
-      main .contactpage .contactinfo {
-        padding: 0 20px;
-        width: 50%; }
-        main .contactpage .contactinfo iframe {
-          width: 90%;
-          height: 70%; }
-      main .contactpage form {
-        padding: 0 10px;
-        width: 50%; }
-        main .contactpage form textarea,
-        main .contactpage form input {
-          width: 90%; }
-        main .contactpage form button {
-          max-width: 35rem;
-          padding: 0.5rem 2rem;
-          margin: 0 auto;
-          font-size: 1.5rem;
-          border-radius: 5px; }
-  footer .contact {
+        padding: 100px; }
+  main .intro {
+    padding: 20px 25%;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 4rem; }
+  main .content {
+    padding: 0 20% 20px 20%; }
+    main .content p {
+      font-size: 1.2rem; }
+    main .content .info {
+      display: flex; }
+      main .content .info img {
+        width: 50%;
+        padding-top: 10px; }
+      main .content .info p {
+        padding-left: 20px; }
+  main .team .bioscard {
+    display: flex; }
+    main .team .bioscard .bio {
+      margin: 0 50px; }
+      main .team .bioscard .bio img {
+        padding: 20px; }
+  main .contactpage {
+    display: flex;
     padding: 20px; }
-  footer .socialMedia {
-    width: 150px;
-    margin: 10px auto; }
-    footer .socialMedia .icon img {
-      width: 40px;
-      height: 40px; }
-  footer .copyRight {
-    padding: 5px;
-    font-size: 0.7rem; } }
+    main .contactpage .contactinfo {
+      width: 50%; }
+    main .contactpage form {
+      width: 50%; }
+      main .contactpage form textarea,
+      main .contactpage form input {
+        width: 90%; }
+  footer .icon img {
+    width: 40px;
+    height: 40px; } }

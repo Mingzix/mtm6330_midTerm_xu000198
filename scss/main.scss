@@ -24,6 +24,7 @@ $sec-color: #1b1b1b;
     align-items: center;
     display: flex;
     padding: 0 25%;
+    text-decoration-line: none;
     img {
       height: calc(100% - 1rem);
       width: auto;
@@ -70,11 +71,11 @@ $sec-color: #1b1b1b;
     }
   }
 }
-
+//slideshow style for general
 .show {
   color: white;
   padding: 0px;
-  max-width: 1280px;
+
   margin: 0 auto;
   height: 250px;
 
@@ -83,23 +84,24 @@ $sec-color: #1b1b1b;
   background-repeat: no-repeat;
   .subtitle {
     background-color: hsla(10%, 10%, 10%, 0.5);
-    font-size: 18px;
+    font-size: 1rem;
     align-items: center;
     height: 250px;
     text-align: center;
     padding: 50px 0;
     p {
-      margin: 0 auto;
+      margin: 25px auto;
     }
     .button {
       background-color: $brand-color;
-      margin: 10px auto;
+      margin: 30px auto;
       color: white;
       box-shadow: #0071bc 0px 0px 10px;
       width: 200px;
       border-radius: 10px;
       padding: 10px;
       text-align: center;
+      text-decoration-line: none;
     }
     h2 {
       font-size: 1.4rem;
@@ -111,27 +113,29 @@ $sec-color: #1b1b1b;
     }
   }
 }
-.show.one {
+.show.home {
   background-image: url(../../img/4.jpg);
   background-position: top;
 }
-.show.two {
+.show.service {
   background-image: url(../../img/7.jpg);
 }
-.show.three {
+.show.about {
   background-image: url(../../img/6.jpg);
 }
-.show.four {
+.show.contact {
   background-image: url(../../img/2.jpg);
 }
+//main content style
 main {
   margin: 0px auto;
+  // style for the elements with class name of 'intros' in home page and about page and service pag
   .intro {
     padding: 10px 20px;
     width: 100%;
     margin: 0 auto;
-    background-color: hsl(0, 0%, 94%);
   }
+  //service page style
   .content {
     padding: 0px 10px;
     margin: 10px auto;
@@ -153,9 +157,12 @@ main {
       }
     }
   }
+  //about page setting
   .team {
     text-align: center;
     margin: 0 auto;
+    padding: 30px 10px;
+    background-color: #dbefff;
 
     .bioscard {
       display: block;
@@ -175,6 +182,7 @@ main {
       }
     }
   }
+  //contact page style
   .contactpage {
     .contactinfo {
       padding: 0 20px;
@@ -222,6 +230,7 @@ main {
     }
   }
 }
+// footer style
 footer {
   background-color: $sec-color;
   color: white;
@@ -253,6 +262,7 @@ footer {
 mobile
 ------*/
 @media screen and (min-width: 560px) {
+  //general style for navigation
   .navbar {
     $height: 60px;
     display: flex;
@@ -267,12 +277,8 @@ mobile
       padding-left: 1rem;
       display: flex;
       height: 100%;
-      img {
-        height: calc(100% - 1rem);
-        width: auto;
-      }
+
       .title {
-        padding-left: 8px;
         font-size: 1.5rem;
       }
     }
@@ -281,135 +287,97 @@ mobile
       flex-grow: 1;
       justify-content: space-between;
       align-items: center;
-      height: 60px;
+      height: $height;
     }
 
     .menu-item {
       display: flex;
-      flex-grow: 1;
       height: $height;
-      justify-content: center;
-      letter-spacing: 0.5px;
       font-size: 1rem;
       border: none;
     }
   }
+  //slideshow style for general
   .show {
-    max-width: 1280px;
     height: 400px;
     .subtitle {
-      font-size: 20px;
+      font-size: 1.3rem;
       padding: 120px 10%;
       height: 400px;
-      .button {
-        width: 200px;
-        border-radius: 10px;
-        padding: 10px;
-        text-align: center;
+      p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        padding: 1rem;
       }
+
       h2 {
         font-size: 2rem;
-        font-weight: 300;
-        margin: 0 auto;
         padding: 100px;
-        text-align: center;
       }
     }
   }
+  //main content style
   main {
-    margin: 0px auto;
     .intro {
       padding: 20px 25%;
-      width: 100%;
-      margin: 0 auto;
       text-align: center;
+      font-size: 1.6rem;
+      line-height: 4rem;
     }
+    //service page style
     .content {
-      padding: 0px 20%;
-      h3 {
-        font-size: 1.5rem;
+      padding: 0 20% 20px 20%;
+      p {
+        font-size: 1.2rem;
       }
+
       .info {
         display: flex;
-        justify-content: center;
-        flex-grow: 1;
+
         img {
           width: 50%;
-          height: 100%;
           padding-top: 10px;
         }
         p {
-          margin: 0 auto;
           padding-left: 20px;
         }
       }
     }
+    // about page team member
     .team {
-      text-align: center;
-      margin: 0 auto;
-
       .bioscard {
         display: flex;
-        justify-content: center;
-        flex-grow: 1;
+
         .bio {
           margin: 0 50px;
 
           img {
             padding: 20px;
-            width: 200px;
-          }
-          .name {
-            font-size: 1.5rem;
           }
         }
       }
     }
+    //contact page
     .contactpage {
       display: flex;
       padding: 20px;
       .contactinfo {
-        padding: 0 20px;
         width: 50%;
-        iframe {
-          width: 90%;
-          height: 70%;
-        }
       }
       form {
-        padding: 0 10px;
         width: 50%;
         textarea,
         input {
           width: 90%;
         }
-
-        button {
-          max-width: 35rem;
-          padding: 0.5rem 2rem;
-          margin: 0 auto;
-          font-size: 1.5rem;
-          border-radius: 5px;
-        }
       }
     }
   }
+  //footer style
   footer {
-    .contact {
-      padding: 20px;
-    }
-    .socialMedia {
-      width: 150px;
-      margin: 10px auto;
-
-      .icon img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-    .copyRight {
-      padding: 5px;
-      font-size: 0.7rem;
+    .icon img {
+      width: 40px;
+      height: 40px;
     }
   }
 }
